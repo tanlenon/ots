@@ -88,6 +88,14 @@ label {
     margin-right: 15px;
 }
 
+#colorChoice1 {
+    background-color: black;
+}
+
+#colorChoice2 {
+    background-color: blue;
+}
+
 
 /*---------------------------------------PREVIEW------------------------------------------*/
 

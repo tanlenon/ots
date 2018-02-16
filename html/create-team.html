@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Our Town Sports</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/create-team.css">
 
        
   </head>
@@ -18,11 +18,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="html/create-team.html">Create a Team</a>
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="create-team.html">Create a Team <span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <!-- <form class="form-inline my-2 my-lg-0">
@@ -33,24 +33,16 @@
     </nav>
 
     <div class="content-container container">
-      <div class="row">
-          <h1 class="page-header">Giphy APIs!</h1>
-          <p class="content">I integrated two APIs from <a href="https://developers.giphy.com/docs/">GIPHY</a> to pull GIFs and stickers onto my website, along with the urls that lead to them. A gif is a moving image and a sticker is an animation with a transparent background. You can go to my <a href="pages/gifs.html">Gifs</a> tab to search different gifs or to my <a href="pages/stickers.html">Stickers</a> tab to search through different stickers. Just search for a topic and 50 results will be provided to you related to that topic. Have fun!</p>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6 center">
-          <a href="pages/gifs.html">
-            <h3 class="mini-header">This is a GIF!</h3>
-            <img src="https://media3.giphy.com/media/AnZJpnQwAC29W/200w.gif">
-          </a>
-        </div>
-        <div class="col-12 col-md-6 center">
-          <a href="pages/stickers.html">
-            <h3 class="mini-header">This is a Sticker!</h3>
-            <img src="https://media2.giphy.com/media/3o7btYKPbnnjEMAGpG/200w.gif">
-          </a>
-        </div>
-      </div>
+      <form id="formID">
+        <fieldset>
+          <input type="color" id="colorChoice">
+          <input type="file" id="img-file-input" name="pic" accept="image/*">
+          <input type="submit">
+        </fieldset>
+      </form>
+
+      <div id="show"></div>
+      <div id="show-other" style="width:50px;height:50px;background-color:black;"></div>
     </div>
 
 
@@ -58,6 +50,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../js/create-team.js"></script>
 
   </body>
 

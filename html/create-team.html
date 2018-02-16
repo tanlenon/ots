@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Our Town Sports</title>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/create-team.css">
 
@@ -42,14 +43,13 @@
 
           <div class="form-group">
             <label for="usr">Team Name:</label>
-            <input type="text" class="form-control" id="usr">
+            <input type="text" class="form-control" id="team-name">
           </div>
 
           <div class="form-group">
             <label for="usr">Team Color 1:</label>
             <input type="text" readonly="true" class="jscolor {onFineChange:'update(this,1)'}" value="000" id="colorChoice1" >
           </div>
-          
 
           <div class="form-group">
             <label for="usr">Team Color 2:</label>
@@ -61,13 +61,24 @@
             <input type="file" id="img-file-input" name="pic" accept="image/*">
           </div>
 
+          <div class="form-group">
+            <label for="usr">Sport:</label>
+            <select class="form-control" data-show-icon="true">
+              <option>Basketball</option>
+              <option> Baseball</option>
+              <option>Football</option>
+              <option>Soccer</option>
+              <option>Vollyball</option>
+            </select>
+          </div>
+
           <input type="submit" id="teamSubmit" class="btn btn-info" value="Search" />
           
         </form>
 
         <div class="right-side col-12 col-md-6">
           <div class="padding center image-and-colors">
-            <h2 class="topic-header">Preview</h2>
+            <h2 id="name-header" class="topic-header">Preview</h2>
             <div id="show-color-1"></div>
             <div id="show-color-2"></div>
             <div id="show-logo">
@@ -77,9 +88,6 @@
         </div>
       </div>
     </div>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

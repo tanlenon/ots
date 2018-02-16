@@ -12,5 +12,9 @@ $( document ).ready(function() {
         img.attr("src",window.URL.createObjectURL(files[0]));
 
     });
+
+    $('#team-name').keyup(function() {
+        $('#name-header').text($(this).val());
+    });
     
 });

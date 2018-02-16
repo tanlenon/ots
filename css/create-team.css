@@ -88,11 +88,12 @@ label {
     margin-right: 15px;
 }
 
-/*---------------------------------------PREVIEW------------------------------------------*/
 
+/*---------------------------------------PREVIEW------------------------------------------*/
 
 #show-color-1 {
     background-color: black;
+    border: 1px solid black;
     display: inline-block;
     width: 100px;
     height: 100px;
@@ -100,6 +101,7 @@ label {
 
 #show-color-2 {
     background-color: blue;
+    border: 1px solid black;
     display: inline-block;
     width: 100px;
     height: 100px;

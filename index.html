@@ -1,0 +1,56 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<h1>This is the default text</h1>
+<form id="formID">
+  <fieldset>
+    <input type="color" id="colorChoice">
+    <input type="file" id="img-file-input" name="pic" accept="image/*">
+    <input type="submit">
+  </fieldset>
+</form>
+
+<div id="show"></div>
+<div id="show-other" style="width:50px;height:50px;background-color:black;"></div>
+
+<script>
+  
+  const fileInput = document.getElementById('img-file-input');
+
+  fileInput.addEventListener('change', (e) =>  {
+
+    var files = e.target.files;
+
+    var show = $('#show')
+
+    show.empty();
+
+    show.append('<img src="" id="image">');
+
+    var img = $('#image');
+
+    img.css('max-width','300px');
+    img.css('max-height','300px');
+
+    img.attr("src",window.URL.createObjectURL(files[0]));
+    
+  });
+
+
+
+
+  const colorChange = document.getElementById('colorChoice');
+
+  colorChange.addEventListener('change', (e) =>  {
+
+    var other = $('#show-other');
+
+    other.empty();
+
+    // other.css('width', '50px');
+    // other.css('height', '50px');
+
+    other.css('background-color', $('#colorChoice').val())
+    
+  });
+
+  
+</script>

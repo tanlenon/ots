@@ -71,6 +71,51 @@
 	margin-bottom: 25px;
 }
 
+.topic-header {
+   font-family: 'Roboto', sans-serif;
+   color: #193441;
+   margin-bottom: 15px;
+}
+
+/*---------------------------------------FORM------------------------------------------*/
+
+
+#create-team-form {
+    margin: 25px 0;
+}
+
+label {
+    margin-right: 15px;
+}
+
+
+/*---------------------------------------PREVIEW------------------------------------------*/
+
+
+#show-color-1 {
+    background-color: black;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+#show-color-2 {
+    background-color: blue;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+#loaded-logo {
+    margin: 10px 0;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.image-and-colors {
+    margin: 10px;
+}
+
 
 
 /*---------------------------------------FOOTER------------------------------------------*/
@@ -92,6 +137,19 @@ footer a {
 
 footer a:hover {
 	color: #FCFFF5;;
+}
+
+
+/*---------------------------------------OTHER------------------------------------------*/
+
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.padding {
+    padding: 0 50px;
 }
 
 

@@ -2,37 +2,37 @@ const fileInput = document.getElementById('img-file-input');
 
 fileInput.addEventListener('change', (e) =>  {
 
-var files = e.target.files;
+    var files = e.target.files;
 
-var show = $('#show')
+    var show = $('#show-logo')
 
-show.empty();
+    // show.empty();
 
-show.append('<img src="" id="image">');
+    // show.append('<img src="" id="image">');
 
-var img = $('#image');
+    var img = $('#loaded-logo');
 
-img.css('max-width','300px');
-img.css('max-height','300px');
-
-img.attr("src",window.URL.createObjectURL(files[0]));
+    img.attr("src",window.URL.createObjectURL(files[0]));
 
 });
 
 
 
+const colorChange1 = document.getElementById('colorChoice1');
+const colorChange2 = document.getElementById('colorChoice2');
 
-const colorChange = document.getElementById('colorChoice');
+colorChange1.addEventListener('change', (e) =>  {
 
-colorChange.addEventListener('change', (e) =>  {
+    var other = $('#show-color-1');
 
-var other = $('#show-other');
+    other.css('background-color', $('#colorChoice1').val())
 
-other.empty();
+});
 
-// other.css('width', '50px');
-// other.css('height', '50px');
+colorChange2.addEventListener('change', (e) =>  {
 
-other.css('background-color', $('#colorChoice').val())
+    var other = $('#show-color-2');
+
+    other.css('background-color', $('#colorChoice2').val())
 
 });

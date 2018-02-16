@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Our Town Sports</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" media="screen" type="text/css" href="../colorpicker/css/colorpicker.css" />
     <link rel="stylesheet" href="../css/create-team.css">
 
        
@@ -48,13 +47,13 @@
 
           <div class="form-group">
             <label for="usr">Team Color 1:</label>
-            <input type="text" id="colorChoice1">
+            <input type="text" class="jscolor {onFineChange:'update(this,1)', closable:true, closeText:'Close'}" value="000" id="colorChoice1" >
           </div>
           
 
           <div class="form-group">
             <label for="usr">Team Color 2:</label>
-            <input type="text"  id="colorChoice2">
+            <input type="text" class="jscolor {onFineChange:'update(this,2)', closable:true, closeText:'Close'}" value="00F" id="colorChoice2">
           </div>
 
           <div class="form-group">
@@ -85,11 +84,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../colorpicker/js/jquery.js"></script>
-    <script type="text/javascript" src="../colorpicker/js/colorpicker.js"></script>
-    <script type="text/javascript" src="../colorpicker/js/eye.js"></script>
-    <script type="text/javascript" src="../colorpicker/js/utils.js"></script>
+    <script src="../js/jscolor.js"></script>
     <script src="../js/create-team.js"></script>
+    <script>
+    function update(jscolor,num) {
+        document.getElementById('show-color-' + num).style.backgroundColor = '#' + jscolor;
+    }
+    </script>
 
   </body>
 
